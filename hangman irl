@@ -1,0 +1,35 @@
+#import the random module
+import random
+
+#list of words
+words = ["computer","python","programming","hangman","keyboard"]
+
+#pick a random word
+word = random.choice(words)
+
+#create a variable with an empty value to store the letters the user guessed correctly
+correct_letters = ""
+
+#create a variable with an empty value to store the letters the user guessed incorrectly
+incorrect_letters = ""
+
+#create a variable to store the number of guesses left
+guesses_left = 6
+
+#create a variable to store if the game is still active
+game_active = True
+
+#create a variable to store if the user won the game
+user_won = False
+
+#create a function to print out the current state of the game
+def print_game_status():
+    print("Word: " + display_word())
+    print("Guesses left: " + str(guesses_left))
+    print("Incorrect letters: " + incorrect_letters)
+
+#create a function to display the correct letters and underscores
+def display_word():
+    display = ""
+    for letter in word:
+       
